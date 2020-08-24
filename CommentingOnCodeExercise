@@ -1,0 +1,35 @@
+public with sharing class CommentingOnCodeExercise {
+
+    /**
+     * Your Assignment is to add comments describing what is being done in the methods below.
+     * Call out the concepts you learned in your readings and in class.
+     */
+
+    public static void cartValues() {
+// 4 variable of the type Integer are instantiated
+        Integer minimumCartValue = 50;
+
+        Integer itemA = 10;
+        Integer itemB = 20;
+        Integer itemC = 45;
+//Summing up the value in the variable itemA and itemB and assiging it to the variable cartValue
+        Integer cartValue = itemA + itemB;
+//Declaring a Boolean variable named cartMinimumMet ans value is set to true if the value of the cartvalue variable is greater
+//than equal to minimumCartValue which is equal to 50
+        Boolean cartMinimumMet = cartValue >= minimumCartValue;
+//printing the value of the cartMinimumMet variable in the debug log
+        System.debug('Have we reached the minimum: ' + cartMinimumMet);
+//Summing up the value of the variable cartValue and itemC and assigning it to the variable cartValue.this will over write 
+//the value in the variable cartValue declared earlier which was equal to 30. The new value is 75
+        cartValue = cartValue + itemC;
+
+        //Comapring the value of cartValue and minimumCartValue and setting it to be True when cartValue >= minimumCartValue
+        //In this case the value comapred will look like this cartMinimumMet = 75>= 50 which will evaluate to True 
+        cartMinimumMet = cartValue >= minimumCartValue;
+//printing the value of the cartMinimumMet variable in the debug log
+        System.debug('How about now? : ' + cartMinimumMet);
+
+    }
+
+
+}
